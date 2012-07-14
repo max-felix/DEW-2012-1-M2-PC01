@@ -1,0 +1,1053 @@
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (135.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (60.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateClientes (20120714172246)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "clientes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "apellido" varchar(255), "numtarjeta" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120714172246')
+  [1m[36m (130.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProductos (20120714172401)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "productos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "codigo" integer, "descripcion" varchar(255), "precio" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120714172401')
+  [1m[36m (75.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("clientes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("productos")[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-07-14 12:26:50 -0500
+Served asset /rails.png - 304 Not Modified (63ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2012-07-14 12:26:54 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (0.0ms)[0m  [1mSELECT "clientes".* FROM "clientes" [0m
+  Rendered clientes/index.html.erb within layouts/application (51.0ms)
+Compiled clientes.css  (44ms)  (pid 2860)
+Compiled productos.css  (3ms)  (pid 2860)
+Compiled scaffolds.css  (16ms)  (pid 2860)
+Compiled application.css  (204ms)  (pid 2860)
+Compiled jquery.js  (3ms)  (pid 2860)
+Compiled jquery_ujs.js  (0ms)  (pid 2860)
+Compiled clientes.js  (593ms)  (pid 2860)
+Compiled productos.js  (441ms)  (pid 2860)
+Compiled application.js  (1159ms)  (pid 2860)
+Completed 200 OK in 1769ms (Views: 1767.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /clientes.css - 200 OK (3ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /productos.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /clientes.js - 200 OK (6ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /productos.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:26:56 -0500
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Processing by ClientesController#new as HTML
+  Rendered clientes/_form.html.erb (15.0ms)
+  Rendered clientes/new.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 87ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:02 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/clientes" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Processing by ClientesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zvcy96SGp8tT5KMMYs2SWTlJIjatV2c6KancmbVkJ8=", "cliente"=>{"nombre"=>"MAX", "apellido"=>"FELIX", "numtarjeta"=>"123456789"}, "commit"=>"Create Cliente"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (67.0ms)[0m  [1mINSERT INTO "clientes" ("apellido", "created_at", "nombre", "numtarjeta", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["apellido", "FELIX"], ["created_at", Sat, 14 Jul 2012 17:27:14 UTC +00:00], ["nombre", "MAX"], ["numtarjeta", 123456789], ["updated_at", Sat, 14 Jul 2012 17:27:14 UTC +00:00]]
+  [1m[35m (85.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/clientes/1
+Completed 302 Found in 158ms (ActiveRecord: 152.0ms)
+
+
+Started GET "/clientes/1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCliente Load (1.0ms)[0m  [1mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered clientes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /productos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:14 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.0ms)[0m  SELECT "clientes".* FROM "clientes" 
+  Rendered clientes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:16 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Processing by ClientesController#new as HTML
+  Rendered clientes/_form.html.erb (25.0ms)
+  Rendered clientes/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 44ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/clientes" for 127.0.0.1 at 2012-07-14 12:27:34 -0500
+Processing by ClientesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zvcy96SGp8tT5KMMYs2SWTlJIjatV2c6KancmbVkJ8=", "cliente"=>{"nombre"=>"LUZ", "apellido"=>"MEZA", "numtarjeta"=>"12345678"}, "commit"=>"Create Cliente"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "clientes" ("apellido", "created_at", "nombre", "numtarjeta", "updated_at") VALUES (?, ?, ?, ?, ?)  [["apellido", "MEZA"], ["created_at", Sat, 14 Jul 2012 17:27:34 UTC +00:00], ["nombre", "LUZ"], ["numtarjeta", 12345678], ["updated_at", Sat, 14 Jul 2012 17:27:34 UTC +00:00]]
+  [1m[36m (67.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clientes/2
+Completed 302 Found in 72ms (ActiveRecord: 68.0ms)
+
+
+Started GET "/clientes/2" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Processing by ClientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCliente Load (1.0ms)[0m  SELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered clientes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:35 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (1.0ms)[0m  [1mSELECT "clientes".* FROM "clientes" [0m
+  Rendered clientes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:36 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/PRODUCTOS" for 127.0.0.1 at 2012-07-14 12:27:51 -0500
+
+ActionController::RoutingError (No route matches [GET] "/PRODUCTOS"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/productos" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Processing by ProductosController#index as HTML
+  [1m[35mProducto Load (0.0ms)[0m  SELECT "productos".* FROM "productos" 
+  Rendered productos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /productos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:27:59 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/productos/new" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Processing by ProductosController#new as HTML
+  Rendered productos/_form.html.erb (5.0ms)
+  Rendered productos/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 35ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:01 -0500
+Served asset /productos.js - 304 Not Modified (1ms)
+
+
+Started POST "/productos" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Processing by ProductosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zvcy96SGp8tT5KMMYs2SWTlJIjatV2c6KancmbVkJ8=", "producto"=>{"codigo"=>"01", "descripcion"=>"Bicicleta", "precio"=>"1000"}, "commit"=>"Create Producto"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "productos" ("codigo", "created_at", "descripcion", "precio", "updated_at") VALUES (?, ?, ?, ?, ?)  [["codigo", 1], ["created_at", Sat, 14 Jul 2012 17:28:34 UTC +00:00], ["descripcion", "Bicicleta"], ["precio", 1000], ["updated_at", Sat, 14 Jul 2012 17:28:34 UTC +00:00]]
+  [1m[36m (59.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/productos/1
+Completed 302 Found in 66ms (ActiveRecord: 61.0ms)
+
+
+Started GET "/productos/1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Processing by ProductosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProducto Load (0.0ms)[0m  SELECT "productos".* FROM "productos" WHERE "productos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered productos/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:34 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/productos" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.0ms)[0m  [1mSELECT "productos".* FROM "productos" [0m
+  Rendered productos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/productos/new" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Processing by ProductosController#new as HTML
+  Rendered productos/_form.html.erb (3.0ms)
+  Rendered productos/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:40 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/productos" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Processing by ProductosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zvcy96SGp8tT5KMMYs2SWTlJIjatV2c6KancmbVkJ8=", "producto"=>{"codigo"=>"02", "descripcion"=>"Televisor", "precio"=>"5000"}, "commit"=>"Create Producto"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "productos" ("codigo", "created_at", "descripcion", "precio", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["codigo", 2], ["created_at", Sat, 14 Jul 2012 17:28:54 UTC +00:00], ["descripcion", "Televisor"], ["precio", 5000], ["updated_at", Sat, 14 Jul 2012 17:28:54 UTC +00:00]]
+  [1m[35m (158.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/productos/2
+Completed 302 Found in 162ms (ActiveRecord: 159.0ms)
+
+
+Started GET "/productos/2" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Processing by ProductosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProducto Load (1.0ms)[0m  [1mSELECT "productos".* FROM "productos" WHERE "productos"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered productos/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:54 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/productos" for 127.0.0.1 at 2012-07-14 12:28:55 -0500
+Processing by ProductosController#index as HTML
+  [1m[35mProducto Load (1.0ms)[0m  SELECT "productos".* FROM "productos" 
+  Rendered productos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:55 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:55 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:55 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:56 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:56 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:56 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/productos/new" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Processing by ProductosController#new as HTML
+  Rendered productos/_form.html.erb (3.0ms)
+  Rendered productos/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:28:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/productos" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Processing by ProductosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zvcy96SGp8tT5KMMYs2SWTlJIjatV2c6KancmbVkJ8=", "producto"=>{"codigo"=>"03", "descripcion"=>"Play Station 3", "precio"=>"900"}, "commit"=>"Create Producto"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "productos" ("codigo", "created_at", "descripcion", "precio", "updated_at") VALUES (?, ?, ?, ?, ?)  [["codigo", 3], ["created_at", Sat, 14 Jul 2012 17:29:18 UTC +00:00], ["descripcion", "Play Station 3"], ["precio", 900], ["updated_at", Sat, 14 Jul 2012 17:29:18 UTC +00:00]]
+  [1m[36m (75.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/productos/3
+Completed 302 Found in 79ms (ActiveRecord: 76.0ms)
+
+
+Started GET "/productos/3" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Processing by ProductosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProducto Load (1.0ms)[0m  SELECT "productos".* FROM "productos" WHERE "productos"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered productos/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:18 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/productos" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Processing by ProductosController#index as HTML
+  [1m[36mProducto Load (0.0ms)[0m  [1mSELECT "productos".* FROM "productos" [0m
+  Rendered productos/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:19 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/productos/new" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Processing by ProductosController#new as HTML
+  Rendered productos/_form.html.erb (3.0ms)
+  Rendered productos/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/productos" for 127.0.0.1 at 2012-07-14 12:29:35 -0500
+Processing by ProductosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zvcy96SGp8tT5KMMYs2SWTlJIjatV2c6KancmbVkJ8=", "producto"=>{"codigo"=>"04", "descripcion"=>"IPAD", "precio"=>"1200"}, "commit"=>"Create Producto"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "productos" ("codigo", "created_at", "descripcion", "precio", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["codigo", 4], ["created_at", Sat, 14 Jul 2012 17:29:35 UTC +00:00], ["descripcion", "IPAD"], ["precio", 1200], ["updated_at", Sat, 14 Jul 2012 17:29:35 UTC +00:00]]
+  [1m[35m (86.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/productos/4
+Completed 302 Found in 91ms (ActiveRecord: 88.0ms)
+
+
+Started GET "/productos/4" for 127.0.0.1 at 2012-07-14 12:29:35 -0500
+Processing by ProductosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProducto Load (1.0ms)[0m  [1mSELECT "productos".* FROM "productos" WHERE "productos"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered productos/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:36 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/productos" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Processing by ProductosController#index as HTML
+  [1m[35mProducto Load (0.0ms)[0m  SELECT "productos".* FROM "productos" 
+  Rendered productos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /clientes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/USERS" for 127.0.0.1 at 2012-07-14 12:29:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/USERS"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Processing by ClientesController#index as HTML
+  [1m[36mCliente Load (1.0ms)[0m  [1mSELECT "clientes".* FROM "clientes" [0m
+  Rendered clientes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /productos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/productos.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /productos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-14 12:29:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
